@@ -34,6 +34,7 @@ public class AddBookServlet extends HttpServlet
 			ps.setString(1, b.getBookname());
 			ps.setString(2, b.getAuthor());
 			ps.setFloat(3, b.getPrice());
+			//
 			ps.setString(4, b.getLink());
 			ps.executeUpdate();
 			resp.sendRedirect("books.jsp");
