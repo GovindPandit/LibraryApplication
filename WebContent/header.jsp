@@ -36,6 +36,9 @@
         <a class="nav-link" href="books.jsp">Books</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="users.jsp">Users</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="aboutus.jsp">About Us</a>
       </li>
       </ul>
