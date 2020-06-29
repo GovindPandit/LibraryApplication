@@ -13,9 +13,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- Scriplet tag -->
+	<%
+		session.removeAttribute("user");
+		session.invalidate();
+	%>
+	
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<form class="col-lg-6 col-md-6 col-sm-12 col-xs-12 myclass">
+		<form class="col-lg-6 col-md-6 col-sm-12 col-xs-12 myclass" action="LoginServlet" method="post">
 			<div class="form-group">
 				<label>Enter Username</label>
 				<input type="text" name="username" class="form-control" placeholder="Enter Username"/>

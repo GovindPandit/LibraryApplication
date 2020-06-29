@@ -29,10 +29,11 @@ public class RegistrationServlet extends HttpServlet
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/librarydb","root","root");
-			PreparedStatement ps=con.prepareStatement("insert into users values(?,?,?)");
+			PreparedStatement ps=con.prepareStatement("insert into users values(?,?,?,?)");
 			ps.setString(1, u.getUsername());
 			ps.setString(2, u.getEmail());
 			ps.setString(3, u.getPassword());
+			ps.setString(4, "user");
 			ps.executeUpdate();
 			resp.sendRedirect("login.jsp");
 		}
@@ -44,3 +45,4 @@ public class RegistrationServlet extends HttpServlet
 		
 	}
 }
+
