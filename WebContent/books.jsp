@@ -24,6 +24,7 @@
 				
 	<table class="table table-bordered table-striped table-hover">
 		<tr>
+			<th>Image</th>
 			<th>Bookname</th>
 			<th>Author</th>
 			<th>Price</th>
@@ -32,6 +33,7 @@
 		
 		<c:forEach items="${rs.rows}" var="row">
 			<tr>
+				<td><img src="ImageServlet?bookname=${row.bookname}" width="200px" height="250px"/></td>
 				<td>${row.bookname}</td>
 				<td>${row.author}</td>
 				<td>${row.price}</td>

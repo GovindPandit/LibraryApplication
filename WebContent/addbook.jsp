@@ -15,7 +15,7 @@
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
 	<div class="container">
-		<form action="AddBookServlet" method="post" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 myclass">
+		<form action="AddBookServlet" method="post" enctype="multipart/form-data" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 myclass">
 			<div class="form-group">
 				<label>Enter BookName</label>
 				<input type="text" name="bookname" class="form-control" placeholder="Enter Bookname"/>
@@ -31,6 +31,10 @@
 			<div class="form-group">
 				<label>Enter Link</label>
 				<input type="text" name="link" class="form-control" placeholder="Enter Link"/>
+			</div>
+			<div class="form-group">
+				<label>Select Image</label>
+				<input type="file" name="image" accept="image/*" class="form-control" placeholder="Select Image"/>
 			</div>
 			<div class="form-group">
 				<input type="submit" value="Add Book" class="btn btn-primary btn-block"/>
