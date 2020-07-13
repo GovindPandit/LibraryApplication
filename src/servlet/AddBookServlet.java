@@ -39,7 +39,7 @@ public class AddBookServlet extends HttpServlet
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/librarydb","root","root");
-			PreparedStatement ps=con.prepareStatement("insert into books values(?,?,?,?,?)");
+			PreparedStatement ps=con.prepareStatement("insert into books (bookname,author,price,link,image) values(?,?,?,?,?)");
 			ps.setString(1, b.getBookname());
 			ps.setString(2, b.getAuthor());
 			ps.setFloat(3, b.getPrice());
