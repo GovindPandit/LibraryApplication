@@ -2,17 +2,18 @@ package model;
 
 public class Book 
 {
-	private String bookid;
+	private int bookid;
 	private String bookname;
 	private String author;
 	private float price;
 	private String link;
 	
+
 	
-	public String getBookid() {
+	public int getBookid() {
 		return bookid;
 	}
-	public void setBookid(String bookid) {
+	public void setBookid(int bookid) {
 		this.bookid = bookid;
 	}
 	public String getBookname() {

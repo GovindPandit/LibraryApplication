@@ -42,6 +42,12 @@
 						<h4 class="price">current price: <span>Rs. ${row.price}</span></h4>
 						<div class="action">
 							<button class="btn btn-primary" type="button">Add to cart</button>
+							
+							<c:if test="${user.role=='admin'}">
+								<a href="DeleteServlet?bookid=${row.bookid}" class="btn btn-danger">Delete</a>
+								<a href="edit.jsp?bookid=${row.bookid}" class="btn btn-secondary">Edit</a>
+							</c:if>
+							
 							<c:if test="${row.price>0}">
 								<button class="btn btn-success" type="button">Buy</button>
 							</c:if>
